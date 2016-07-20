@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<title>Efficient Load</title>
+<meta charset="utf-8" />
+
+</head>
+
+<body id="cuerpo">
+    <header>
+       <h1 id="prueba">Efficient Load</h1>
+    </header>
+    <section>
+       <article>
+           <h2>Efficient Load<h2>
+           <p> It is a small library that allows efficient load js files and css </p>
+       </article>
+    </section>
+    <script type="text/javascript" src="../dist/efficientLoad.js"></script>
+  	<script type="text/javascript">
+      /**
+       * Initial Config.
+      */
+  		var config = {
+  			element:'cuerpo',//Id of the element where the files were inserted
+  			pools:[//Array Pools
+      					{name:'poolUno',route:'libs/',files:'test1,test2',type:'js'},//Pool of js files
+      					{name:'otherPool',route:'libs/',files:'pruebas,PERSONAS.arg',type:'css'},//Pool of css files 		
+      					{name:'Traducciones',route:'traductions/',files:'traduction.arg',type:'js'}//Pool of traductions files arg should be written for variable use
+  			      ]
+  		};
+      /**
+       * Use.
+      */
+  		var idioma = 'en';
+      /**
+       * Instantiating efficientLoad.
+      */
+  		var eL = new efficientLoad.initConfig(config);
+      /**
+       * all pools.
+      */
+      eL.load();
+      //eL.load('');
+      //eL.load('*');
+
+      /**
+       * specific pool.
+      */
+  		eL.load('poolUno');
+
+      /**
+       * specific pool and argument(arg).
+      */
+
+      eL.load('Traducciones',idioma);
+
+      /**
+       * all pools and argument(arg).
+      */
+
+      eL.load('*',idioma);
+
+      /**
+       * more utilities.
+      */
+      //console.log(eL.showPool());
+      //console.log(eL.showPool('Traducciones'));
+  		//console.log(eL.showElement());
+      //console.log(eL.VERSION);
+  	</script>
+</body>
+</html>

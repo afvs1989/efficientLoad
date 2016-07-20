@@ -1,0 +1,20 @@
+{
+  "name": "efficientLoad",
+  "version": "1.0.0",
+  "description": "It is a small library that allows efficient load js files and css",
+  "main": "dist/efficientLoad.js",
+  "author": "Andres Valenzuela",
+  "keywords": [
+    "lazyload",
+    "load",
+    "lazy",
+    "node",
+    "efficient",
+    "efficientLoad"
+  ],
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
